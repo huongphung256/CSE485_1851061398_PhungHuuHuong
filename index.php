@@ -1,6 +1,7 @@
 <?php include('header.php'); ?>
 <?php include('about.php'); ?>
 <?php include('resume.php'); ?>
+<?php include('feture.php'); ?>
 		
     </div>
     <!-- Optional JavaScript -->
