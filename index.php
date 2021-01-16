@@ -3,6 +3,9 @@
 <?php include('resume.php'); ?>
 <?php include('feature.php'); ?>
 <?php include('skill.php'); ?>
+<?php include('work.php'); ?>
+<?php include('blog.php'); ?>
+<?php include('contact.php'); ?>
 		
     </div>
     <!-- Optional JavaScript -->
