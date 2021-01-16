@@ -1,7 +1,8 @@
 <?php include('header.php'); ?>
 <?php include('about.php'); ?>
 <?php include('resume.php'); ?>
-<?php include('feture.php'); ?>
+<?php include('feature.php'); ?>
+<?php include('skill.php'); ?>
 		
     </div>
     <!-- Optional JavaScript -->
