@@ -1,5 +1,6 @@
 <?php include('header.php'); ?>
 <?php include('about.php'); ?>
+<?php include('resume.php'); ?>
 		
     </div>
     <!-- Optional JavaScript -->
