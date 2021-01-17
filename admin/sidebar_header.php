@@ -43,23 +43,35 @@
                         <p>Admin</p>
                     </center>
                     <li class="item" id="profile">
-                        <a href="#profile" class="menu-btn">
-                            <i class="fas fa-concierge-bell"></i><span>Services<i class="fas fa-chevron-down drop-down"></i></span>
+                        <a href="blog.php" class="menu-btn">
+                            <i class="fas fa-concierge-bell"></i><span>Blog</span>
                         </a>
-                        <div class="sub-menu">
-                            <a href="../services/index.php"><i class="fas fa-list"></i><span>List</span></a>
-                            <a href="../services/add_services.php"><i class="fas fa-folder-plus"></i><span>Add</span></a>
-                        </div>
                     </li>
-                    <li class="item" id="message">
-                        <a href="#message" class="menu-btn">
-                            <i class="fas fa-concierge-bell"></i><span>Services<i class="fas fa-chevron-down drop-down"></i></span>
+
+                    <li class="item" id="profile">
+                        <a href="education.php" class="menu-btn">
+                            <i class="fas fa-concierge-bell"></i><span>Education</span>
                         </a>
-                        <div class="sub-menu">
-                            <a href="#"><i class="fas fa-folder-plus"></i><span>Add</span></a>
-                            <a href="#"><i class="fas fa-edit"></i><span>Edit</span></a>
-                            <a href="#"><i class="fas fa-folder-minus"></i><span>Delete</span></a>
-                        </div>
+                    </li>
+                    <li class="item" id="profile">
+                        <a href="personal.php" class="menu-btn">
+                            <i class="fas fa-concierge-bell"></i><span>Personal</span>
+                        </a>
+                    </li>
+                    <li class="item" id="profile">
+                        <a href="project.php" class="menu-btn">
+                            <i class="fas fa-concierge-bell"></i><span>Project</span>
+                        </a>
+                    </li>
+                    <li class="item" id="profile">
+                        <a href="skill.php" class="menu-btn">
+                            <i class="fas fa-concierge-bell"></i><span>Skill</span>
+                        </a>
+                    </li>
+                    <li class="item" id="profile">
+                        <a href="work.php" class="menu-btn">
+                            <i class="fas fa-concierge-bell"></i><span>Work</span>
+                        </a>
                     </li>
                 
                 </div>
