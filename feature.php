@@ -29,7 +29,6 @@
 									<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
 								</div>
 							</div>
-	
 						</div>
 						<div class="col-md-4 text-center">
 							<div class="feature-left">

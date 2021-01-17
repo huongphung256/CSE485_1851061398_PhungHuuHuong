@@ -5,12 +5,43 @@
 						<h2>Work</h2>
 					</div>
 				</div>
+				<?php 
+					require "admin/config.php";
+					$result = mysqli_query($conn, "SELECT * from project");
+					$row = mysqli_fetch_all($result);
+					foreach($row as $r) {
+				?>
 				<div class="row">
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work" style="background-image: url(image/7.jpg);">
+					<div class="col-md-6 text-center col-padding animate-box">
+						<a href="#" class="work" style="background-image: url(<?php echo $r[3]; ?>);">
+							<div class="desc">
+								<h3><?php echo $r[1]; ?></h3>
+								<span><?php echo $r[2]; ?></span>
+							</div>
+						</a>
+					</div>
+					
+					<!-- <div class="col-md-3 text-center col-padding animate-box">
+						<a href="#" class="work" style="background-image: url(image/9.jpg);">
 							<div class="desc">
 								<h3>Project Name</h3>
-								<span>Illustration</span>
+								<span>Brading</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 text-center col-padding animate-box">
+						<a href="#" class="work" style="background-image: url(image/9.jpg);">
+							<div class="desc">
+								<h3>Project Name</h3>
+								<span>Brading</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 text-center col-padding animate-box">
+						<a href="#" class="work" style="background-image: url(image/9.jpg);">
+							<div class="desc">
+								<h3>Project Name</h3>
+								<span>Brading</span>
 							</div>
 						</a>
 					</div>
@@ -69,7 +100,8 @@
 								<span>Illustration</span>
 							</div>
 						</a>
-					</div>
+					</div> -->
 				</div>
+				<?php } ?>
 			</div>
 		</div>

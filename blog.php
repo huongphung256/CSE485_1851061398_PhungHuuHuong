@@ -6,52 +6,29 @@
 						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 					</div>
 				</div>
+				<?php 
+					require "admin/config.php";
+					$result = mysqli_query($conn, "SELECT * from blog");
+					$row = mysqli_fetch_all($result);
+					foreach($row as $r) {
+				?>
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-6 text-center col-padding animate-box">
 						<div class="fh5co-blog animate-box">
-							<a href="#" class="blog-bg" style="background-image: url(image/3.jpg);"></a>
+							<a href="#" class="blog-bg" style="background-image: url(<?php echo $r[1]; ?>);"></a>
 							<div class="blog-text">
-								<span class="posted_on">Mar. 15th 2016</span>
-								<h3><a href="#">Photoshoot On The Street</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<span class="posted_on"><?php echo $r[4]; ?></span>
+								<h3><a href="#"><?php echo $r[2]; ?></a></h3>
+								<p><?php echo $r[3]; ?></p>
 								<ul class="stuff">
-									<li><i class="icon-heart2"></i>249</li>
-									<li><i class="icon-eye2"></i>308</li>
-									<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-								</ul>
-							</div> 
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="fh5co-blog animate-box">
-							<a href="#" class="blog-bg" style="background-image: url(image/4.jpg);"></a>
-							<div class="blog-text">
-								<span class="posted_on">Mar. 15th 2016</span>
-								<h3><a href="#">Surfing at Philippines</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<ul class="stuff">
-									<li><i class="icon-heart2"></i>249</li>
-									<li><i class="icon-eye2"></i>308</li>
-									<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-								</ul>
-							</div> 
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="fh5co-blog animate-box">
-							<a href="#" class="blog-bg" style="background-image: url(image/5.jpg);"></a>
-							<div class="blog-text">
-								<span class="posted_on">Mar. 15th 2016</span>
-								<h3><a href="#">Capture Living On Uderwater</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<ul class="stuff">
-									<li><i class="icon-heart2"></i>249</li>
-									<li><i class="icon-eye2"></i>308</li>
+									<li><i class="fas fa-heart"></i><?php echo $r[5]; ?></li>
+									<li><i class="fas fa-eye"></i><?php echo $r[6]; ?></li>
 									<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
 								</ul>
 							</div> 
 						</div>
 					</div>
 				</div>
+				<?php } ?>
 			</div>
 		</div>

@@ -1,3 +1,10 @@
+<?php 
+	require "admin/config.php";
+	$sql = "SELECT * from personal WHERE personal_id = 1";
+	$result = mysqli_query($conn, $sql);
+	while($row = mysqli_fetch_assoc($result)) {
+?>
+
 <div id="fh5co-about" class="animate-box">
 			<div class="container">
 				<div class="row">
@@ -8,26 +15,25 @@
 				<div class="row">
 					<div class="col-md-4">
 						<ul class="info">
-							<li><span class="first-block">Full Name:</span><span class="second-block">Louie Jie Mahusay</span></li>
-							<li><span class="first-block">Phone:</span><span class="second-block">+ 1235 2355 98</span></li>
-							<li><span class="first-block">Email:</span><span class="second-block">info@yoursite.com</span></li>
-							<li><span class="first-block">Website:</span><span class="second-block">www.yoursite.com</span></li>
-							<li><span class="first-block">Address:</span><span class="second-block">198 West 21th Street, Suite 721 New York NY 10016</span></li>
+							<li><span class="first-block">Full Name:</span><span class="second-block"><?php echo $row['fullname']; ?></span></li>
+							<li><span class="first-block">Phone:</span><span class="second-block"><?php echo $row['phone']; ?></span></li>
+							<li><span class="first-block">Email:</span><span class="second-block"><?php echo $row['email']; ?></span></li>
+							<li><span class="first-block">Website:</span><span class="second-block"><?php echo $row['website']; ?></span></li>
+							<li><span class="first-block">Address:</span><span class="second-block"><?php echo $row['address']; ?></span></li>
 						</ul>
 					</div>
 					<div class="col-md-8">
 						<h2>Hello There!</h2>
-						<p>There live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in bookmarksgrove there live the blind texts far from the countries.</p>
-						<p>Far far away, behind the word mountains, Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci there live the blind texts from the countries Vokalia and Consonantia, there live the blind texts. Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-						<p>
+						<p><?php echo $row['introduce']; ?><p>
 							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-								<li><a href="#"><i class="fab fa-instalod"></i></a></li>
+								<li><a href="<?php echo $row['twitter_link']; ?>"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="<?php echo $row['facebook_link']; ?>"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="<?php echo $row['youtube_link']; ?>"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="<?php echo $row['github_link']; ?>"><i class="fab fa-github"></i></a></li>
 							</ul>
 						</p>
 					</div>
 				</div>
 			</div>
+			<?php } ?>
 		</div>

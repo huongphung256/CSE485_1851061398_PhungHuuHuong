@@ -1,0 +1,259 @@
+/*---------- Admin ---------------*/
+#admin *{
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    /*font-family: "Roboto", sans-serif;*/
+}
+#admin body{
+    background: #fff;
+}
+#admin .wrapper .header{
+    z-index: 1;
+    background: #22242a;
+    position: fixed;
+    width: calc(100% - 0%);
+    height: 70px;
+    display: flex;
+    top: 0;
+}
+#admin .wrapper .header .header-menu{
+    width: calc(100% - 0%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+#admin .wrapper .header .header-menu .title-admin{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-left: 55px;
+    font-weight: 900;
+}
+#admin .wrapper .header .header-menu .title-admin span{
+    color: #a517ba;
+}
+#admin .wrapper .header .header-menu .sidebar-btn{
+    color: #fff;
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 9px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+}
+#admin .wrapper .header .header-menu .sidebar-btn:hover{
+    color: #5f1782;
+}
+
+#admin .wrapper .header .header-menu ul{
+    display: flex;
+}
+#admin .wrapper .header .header-menu ul li{
+    margin-top: 12px;
+}
+#admin .wrapper .header .header-menu ul li a{
+    background: #fff;
+    color: #000;
+    display: block;
+    margin: 0 10px;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-property: background, color;
+}
+#admin .wrapper .header .header-menu ul li a:hover{
+    background: #a517ba;
+    color: #fff;
+}
+
+#admin .wrapper .sidebar{
+    z-index: 1;
+    background: #2f323a;
+    position: fixed;
+    top: 70px;
+    width: 250px;
+    height: calc(100% - 9%);
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+}
+#admin .wrapper .sidebar-menu{
+    overflow: hidden;
+}
+#admin .wrapper .sidebar-menu .profile img{
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#admin .wrapper .sidebar-menu .profile p{
+    color: #bbb;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+#admin .wrapper .sidebar-menu .item{
+    width: 250px;
+    overflow: hidden;
+}
+#admin .wrapper .sidebar-menu .item .menu-btn{
+    display: block;
+    color: #fff;
+    position: relative;
+    padding: 25px 20px;
+    transition: 0.3s;
+    transition-property: color;
+}
+#admin .wrapper .sidebar-menu .item .menu-btn:hover{
+    color: #a517ba;
+}
+
+#admin .wrapper .sidebar-menu .item .menu-btn i{
+    margin-right: 20px;
+}
+
+#admin .wrapper .sidebar-menu .item .menu-btn .drop-down{
+    float: right;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+#admin .wrapper .sidebar-menu .item .sub-menu{
+    background: #5f1782;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    transition-property: background, max-height;
+}
+
+#admin .wrapper .sidebar-menu .item .sub-menu a{
+    display: block;
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+    transition: 0.3s;
+    transition-property: background; 
+}
+#admin .wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+    background: #55b1f0;
+}
+#admin .wrapper .sidebar .sidebar-menu .item .sub-menu i{
+    padding-right: 20px;
+    font-size: 15px;
+}
+#admin .wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+    max-height: 500px;
+}
+#admin .wrapper .main-container{
+    width: (100-250px);
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 15px;
+    background: #ebeef8;
+    background-size: cover;
+    height: 120vh;
+    transition: 0.1s;
+}
+#check:checked ~ .main-container{
+    margin-left: 60px;
+}
+#check{
+    display: none;
+}
+label #sidebar_btn:hover{
+    color: #a517ba;
+}
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 188px;
+    width: 70px;
+}
+@media (max-width: 767px){
+    .sidebar{
+        left: -190px;
+    }
+    .sidebar a span{
+        display: none;
+    }
+    .sidebar a{
+        font-size: 20px;
+        margin-left: 170px;
+        width: 80px;
+    }
+    .main-container{
+        margin-left: 60px;
+    }
+}
+
+/* ------------------- Login ------------------- */
+#login{
+    background: linear-gradient(to right, #a517ba, #5f1782);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#login *{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+#login form{
+    width: 500px;
+    border: 2px solid #cccccc;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+}
+#login h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#login input{
+    display: block;
+    border: 2px solid #cccccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+}
+#login label{
+    font-size: 18px;
+    padding: 10px;
+}
+#login button{
+    float: right;
+    background: #555;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+#login button:hover{
+    opacity: .7;
+}
+#login .error{
+    background: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
