@@ -39,7 +39,7 @@
             <div class="sidebar">
                 <div class="sidebar-menu">
                     <center class="profile">
-                        <img src="../image/7.jpg" alt="">
+                        <img src="../image/avatar.jpg" alt="">
                         <p>Admin</p>
                     </center>
                     <li class="item" id="profile">
